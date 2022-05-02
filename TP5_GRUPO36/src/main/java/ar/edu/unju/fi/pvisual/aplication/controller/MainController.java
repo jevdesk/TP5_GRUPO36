@@ -1,4 +1,4 @@
-package ar.edu.unju.fi.pvisual.controller;
+package ar.edu.unju.fi.pvisual.aplication.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
