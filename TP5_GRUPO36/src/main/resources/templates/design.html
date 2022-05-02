@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Diseno</title>
+</head>
+<body>
+
+	<header th:replace="layouts/header :: header"></header>
+	
+	<nav th:replace="layouts/nav :: nav"></nav>
+	
+	<section>
+
+		<h2>Cursos de Diseño</h2>
+		<p>Inscripciones abiertas hasta el 10 de Junio delos siguientes cursos:</p>
+
+		<ol>
+			<li>Diseño UX / UI</li>
+
+			<li>Diseño responsivo con CSS</li>
+
+			<li>Photoshop</li>
+
+			<li>Illustrator</li>
+		</ol>
+
+		<table>
+			<tr>
+				<th>Curso</th>
+				<th>Fecha inicio</th>
+				<th>Horario</th>
+				<th>Fecha Fin</th>
+				<th>Modaliddad</th>
+				<th>Docente</th>
+				<th>Duración</th>
+			</tr>
+
+			<tr>
+				<td>Diseño UX / UI</td>
+				<td>03/07/2022</td>
+				<td>8am a 11am</td>
+				<td>19/08/2022</td>
+				<td>Presencial</td>
+				<td>Acosta</td>
+				<td>8 semanas</td>
+
+			</tr>
+			<tr>
+
+				<td>CSS básico/intermedio</td>
+				<td>03/07/2022</td>
+				<td>1pm a 4pm</td>
+				<td>19/08/2022</td>
+				<td>Presencial</td>
+				<td>Gallardo</td>
+				<td>7 semanas</td>
+
+			</tr>
+			<tr>
+
+				<td>Photoshop</td>
+				<td>03/07/2022</td>
+				<td>5pm a 7pm</td>
+				<td>19/08/2022</td>
+				<td>Virtual</td>
+				<td>Mamani</td>
+				<td>7 semanas</td>
+
+			</tr>
+			<tr>
+
+				<td>Illustrator</td>
+				<td>03/07/2022</td>
+				<td>7pm a 10pm</td>
+				<td>19/08/2022</td>
+				<td>Virtual</td>
+				<td>Vera</td>
+				<td>7 semanas</td>
+
+			</tr>
+		</table>
+	</section>
+	
+	<footer th:replace="layouts/footer :: footer"></footer>
+	
+</body>
+</html>

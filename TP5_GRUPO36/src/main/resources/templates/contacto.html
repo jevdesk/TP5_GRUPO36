@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Contacto</title>
+</head>
+<body>
+	<!-- header -->
+	<header th:replace="layouts/header :: header"></header>
+	
+	<!-- nav-lista sin ordenar -->
+	<nav th:replace="layouts/nav :: nav"></nav>
+	<h3 style="padding: 10px">Ingrese sus datos por favor: </h3>
+	
+	<!-- formulario -->
+	<form action="contacto.html" method="post" style="border: 1px solid; width: 450px; padding: 10px; margin: 20px" >
+		
+	  	Nombre y Apellido: 
+	  	<input type="text" name="nombreYapellido" /> <br><br>
+		Provincia:
+		<select name="provincia">
+			<option>Jujuy</option>
+			<option>Catamarca</option>
+			<option>Salta</option>
+			<option>Tucuman</option>
+			<option>La Rioja</option>
+			<option>Santiago del Estero</option>
+		</select><br><br>
+		Telefono: 
+		<input type="tel" name="telefono"/> <br><br>
+		Email: 
+		<input type="email" name="email" /> <br><br>
+		Estado Civil:<br>
+		
+		<input type="radio"/>Soltero <br>
+		<input type="radio"/>Casado <br>
+		<input type="radio"/>Otro <br>
+		<br><br>
+		Mensaje: 
+	  	<textarea name="mensaje" style="height: 25px"> </textarea> <br><br>
+		botón de envio: 
+		<input type="submit" name="boton" value="Enviar datos"> <br><br>
+	</form>
+	
+	<!-- footer -->
+	<footer th:replace="layouts/footer :: footer"></footer>
+	
+</body>
+</html>
