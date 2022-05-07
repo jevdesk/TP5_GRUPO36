@@ -15,7 +15,7 @@ public class BecasController {
 	
 	@GetMapping("/beneficios")
 	public ModelAndView mostrarListado() {
-		ModelAndView model = new ModelAndView("beneficios");		
+		ModelAndView model = new ModelAndView("beneficios"); //en pagina beneficios.html	
 		model.addObject("beneficiados", becas.getListaBecas());//objeto beneficiados para html
 		model.addObject("alumnos", alumnos.getListaAlumnos());//objeto alumnos para html
 		return model;

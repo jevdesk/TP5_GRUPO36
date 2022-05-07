@@ -7,13 +7,21 @@ public class Docente {
 	private String nombre;
 	private String apellido;
 	private String email;
-	private int telefono;
+	private long telefono;
 	
 	public Docente() {
 		
 	}
 	
-	public Docente(int legajo, String nombre, String apellido, String email, int telefono) {
+	/**
+	 * Constructor con todos los atributos del objeto Docente
+	 * @param legajo Nro. de Legajo del docente
+	 * @param nombre Nombre(s) del docente
+	 * @param apellido Apellido(s) del docente
+	 * @param email Correo electrónico del docente
+	 * @param telefono Nro de telf fijo o de celular del docente
+	 */
+	public Docente(int legajo, String nombre, String apellido, String email, long telefono) {
 		super();
 		this.legajo = legajo;
 		this.nombre = nombre;
@@ -54,11 +62,11 @@ public class Docente {
 		this.email = email;
 	}
 	
-	public int getTelefono() {
+	public long getTelefono() {
 		return telefono;
 	}
 	
-	public void setTelefono(int telefono) {
+	public void setTelefono(long telefono) {
 		this.telefono = telefono;
 	}
 	

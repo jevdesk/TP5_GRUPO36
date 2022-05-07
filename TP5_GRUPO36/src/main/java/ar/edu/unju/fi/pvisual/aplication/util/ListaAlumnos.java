@@ -5,10 +5,18 @@ import java.util.List;
 
 import ar.edu.unju.fi.pvisual.aplication.model.Alumno;
 
+/**
+ * Clase que permite Crear un ArrayList de los objetos Alumnos
+ * @author arielguti -G36 *
+ */
 public class ListaAlumnos {
 	
 	private List<Alumno> listaAlumnos;
-
+	
+	/**
+	 * Constructor por defecto que permite crear objetos Alumnos y
+	 * permite Inicializar el atributo listaAlumnos y agregarle los objetos alumnos
+	 */
 	public ListaAlumnos() {
 		listaAlumnos = new ArrayList<>();
 		Alumno alumno1 = new Alumno(30303090,"Ariel","Mamaní","arielguti111@gmail.com",4496476);
@@ -21,6 +29,10 @@ public class ListaAlumnos {
 		listaAlumnos.add(alumno4);
 	}
 	
+	/**
+	 * Getter que permite obtener la lista de alumnos
+	 * @return Un List de objetos alumnos
+	 */
 	public List<Alumno> getListaAlumnos() {
 		return listaAlumnos;
 	}

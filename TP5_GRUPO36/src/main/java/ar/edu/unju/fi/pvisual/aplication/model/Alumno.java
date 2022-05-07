@@ -7,13 +7,21 @@ public class Alumno {
 	private String nombre;
 	private String apellido;
 	private String email;
-	private int telefono;
+	private long telefono;
 	
 	public Alumno() {
 		
 	}
 	
-	public Alumno(int dni, String nombre, String apellido, String email, int telefono) {
+	/**
+	 * Constructor con todos los atributos del objeto Alumno
+	 * @param dni Nro de DNI del alumno
+	 * @param nombre Nombres del alumno
+	 * @param apellido Apellidos del alumno
+	 * @param email Correo electrónico del alumno
+	 * @param telefono Telefono fijo o celular del alumno
+	 */
+	public Alumno(int dni, String nombre, String apellido, String email, long telefono) {
 		super();
 		this.dni = dni;
 		this.nombre = nombre;
@@ -54,11 +62,11 @@ public class Alumno {
 		this.email = email;
 	}
 	
-	public int getTelefono() {
+	public long getTelefono() {
 		return telefono;
 	}
 	
-	public void setTelefono(int telefono) {
+	public void setTelefono(long telefono) {
 		this.telefono = telefono;
 	}
 	

@@ -7,11 +7,15 @@ import java.util.List;
 import ar.edu.unju.fi.pvisual.aplication.model.Curso;
 import ar.edu.unju.fi.pvisual.aplication.model.Docente;
 
+/**
+ * Clase que permite crear una lista de objetos Cursos
+ * @author arielguti - G36 *
+ */
 public class ListaCursos {
 	
 	private List<Curso> cursos;
 	
-	Docente docente1 = new Docente(1598,"Ariel","Vega","s@gmail.com",154123123);
+	Docente docente1 = new Docente(1598,"Ariel","Vega","s@gmail.com",999999999);
 	Docente docente2 = new Docente(1010,"Gustavo","Sosa","s@gmail.com",154123123);
 	Docente docente3 = new Docente(2020,"Carolina","Apaza","s@gmail.com",154123123);
 	Docente docente4 = new Docente(1403,"Juan C","Rodriguez","s@gmail.com",154123123);
@@ -34,6 +38,10 @@ public class ListaCursos {
 		cursos.add(curso5);
 	}
 	
+	/**
+	 * Getter que permite obtener la lista de objetos cursos
+	 * @return List con objetos tipo Curso
+	 */
 	public List<Curso> getCursos() {
 		return cursos;
 	}
