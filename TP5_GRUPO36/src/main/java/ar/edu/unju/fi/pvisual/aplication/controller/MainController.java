@@ -1,15 +1,9 @@
 package ar.edu.unju.fi.pvisual.aplication.controller;
 
-import java.util.ArrayList;
-
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import ar.edu.unju.fi.pvisual.aplication.model.Beca;
-import ar.edu.unju.fi.pvisual.aplication.util.ListaAlumnos;
-import ar.edu.unju.fi.pvisual.aplication.util.ListaBecas;
 import ar.edu.unju.fi.pvisual.aplication.util.ListaCursos;
 
 

@@ -11,7 +11,7 @@ public class Curso {
 	private LocalDate fechaInicio;
 	private LocalDate fechaFinal;
 	private int cantidadHoras;
-	private String modalidad;//Virtual/Presencial
+	private String modalidad;
 	private Docente docente;
 	
 	public Curso() {

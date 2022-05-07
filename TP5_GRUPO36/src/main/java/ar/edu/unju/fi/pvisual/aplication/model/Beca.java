@@ -15,6 +15,14 @@ public class Beca {
 		
 	}
 	
+	/**
+	 * Constructor con todos los atributos del objeto Beca
+	 * @param codigo Nro. de Cód de la Beca
+	 * @param curso Nombre del curso para la beca
+	 * @param fechaInicio Fecha de inicio de la beca
+	 * @param fechaCierre Fecha de cierre de la beca
+	 * @param estado estado de la beca
+	 */
 	public Beca(int codigo, Curso curso, LocalDate fechaInicio, LocalDate fechaCierre, String estado) {
 		super();
 		this.codigo = codigo;

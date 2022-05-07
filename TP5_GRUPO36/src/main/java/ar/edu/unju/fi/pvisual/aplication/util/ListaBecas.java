@@ -5,19 +5,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ar.edu.unju.fi.pvisual.aplication.model.Beca;
-import ar.edu.unju.fi.pvisual.aplication.model.Curso;
-import ar.edu.unju.fi.pvisual.aplication.model.Docente;
 
+/**
+ * Clase que permite crear una lista de objetos Becas
+ * y también tiene un atributo que inicializa una lista de cursos
+ * @author arielguti - G36 *
+ */
 public class ListaBecas {
 	
 	private List<Beca> listaBecas;
+	
+	/**
+	 * Atributo que permite acceder a la lista de Cursos
+	 */
 	private ListaCursos listaCursos = new ListaCursos();
 	
 	/**
 	 * Constructor por defecto que carga el atributo ListaBeca
 	 */
-	public ListaBecas() {
-		//listaBecas = new ArrayList<Beca>();
+	public ListaBecas() {		
 		cargarListaBecas();
 	}
 
@@ -32,7 +38,10 @@ public class ListaBecas {
 		listaBecas.add(beca2);
     }
 	
-	
+	/**
+	 * Getter que permite obtener lista de objetos becas
+	 * @return ArrayList de objetos Beca
+	 */
 	public List<Beca> getListaBecas() {
 		return listaBecas;
 	}
