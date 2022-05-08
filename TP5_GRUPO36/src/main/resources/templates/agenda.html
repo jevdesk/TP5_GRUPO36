@@ -10,13 +10,13 @@
 	
 	<nav th:replace="layouts/nav :: nav"></nav>
 	
-	<div style="background:aqua;display:flex;flex-direction:row;margin-left: 20px;">
-		<video src="./videos/Homero estudiando.mp4" controls="controls" width="60%" style="display:block">
+	<div class="box-video">
+		<video src="./videos/Homero estudiando.mp4" controls="controls">
 		</video>
-		<section style="width: 40%;background:gray;display:block;padding: 10px">
+		<section class="text-video">
 			<p>La educación no es preparación para la vida, la educación es la vida misma. John Dewey.</p>
 		</section>
-	</div>
+	</div >
 	
 	<footer th:replace="layouts/footer :: footer"></footer>
 	
