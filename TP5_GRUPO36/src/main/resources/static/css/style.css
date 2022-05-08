@@ -5,6 +5,7 @@ body {
   margin-left: auto;
   font-family: "Recursive", sans-serif;
 }
+
 a {
 	text-decoration: none;
 }
@@ -16,9 +17,7 @@ a {
 	border-radius: 20px;
 	font-size: 15px;
 	font-family:'calibri';
-	box-shadow: 7px 13px 37px #000;
-	
-	
+	box-shadow: 7px 13px 37px #000;	
 }
 
 #form .form-label{
@@ -29,8 +28,7 @@ a {
 	padding: 12px;
 	border: solid 1px #0B0954 ;
 	background-color: black;
-	color: white;
-	
+	color: white;	
 }
 
 #form .form-select{
@@ -49,3 +47,19 @@ a {
 	background-size: 100%;
 }
 
+
+/* Zona de agenda.html */
+#agendaCenter{
+	padding:40px
+}
+#agendaCenter section{
+	background: rgb(211,211,211,0.4);
+	padding:10px
+}
+#agendaCenter section p{
+	font-style: italic;
+	font-weight:bold;
+	font-size:large;
+	color: white;
+	font-family:Candara, Century Gothic,Lucida Calligraphy, Monotype Corsiva;
+}

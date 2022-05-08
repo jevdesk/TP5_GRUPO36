@@ -13,14 +13,14 @@
 	<header th:replace="layouts/header :: header"></header>
 	
 	<nav th:replace="layouts/nav :: nav"></nav>
-	<div class="container-sm-form">
-	<div style="background:aqua;display:flex;flex-direction:row;margin-left: 20px;">
-		<video src="./videos/Homero estudiando.mp4" controls="controls" width="60%" style="display:block">
-		</video>
-		<section style="width: 40%;background:gray;display:block;padding: 10px">
-			<p>La educación no es preparación para la vida, la educación es la vida misma. John Dewey.</p>
-		</section>
-	</div>
+	<div class="container-sm-form" id="agendaCenter">
+		<div id="agendaCenter" class="row justify-content-md-center">
+			<video src="./videos/Homero estudiando.mp4" class="col-md-9 col-12" controls="controls">
+			</video>
+			<section class="col-md-3 col-12">
+				<p>"La educación no es preparación para la vida, la educación es la vida misma". John Dewey.</p>
+			</section>
+		</div>
 	</div>
 	<footer th:replace="layouts/footer :: footer"></footer>
 	
