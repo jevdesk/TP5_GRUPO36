@@ -1,8 +1,4 @@
 body {
-  width: 1280px;
-  margin: 0;
-  margin-right: auto;
-  margin-left: auto;
   font-family: "Recursive", sans-serif;
 }
 
@@ -12,26 +8,10 @@ body {
 	margin-right: 1em;
 }
 
-.box-video {
-	background:aqua;display:flex;flex-direction:row;margin-left: 20px;
-}
-video{
-	display:block;
-	width: 60%;
-}
-.text-video {
-	width: 40%;background:gray;display:block;padding: 10px;
-}
-
 form{
 	border: 1px solid; width: 450px; padding: 10px; margin: 20px;
 }
 footer {
-	background: black;
-	color:white;
-	margin:0;
-	height: 60px;
-	text-align: center;
 	padding:20px;
 }
 
