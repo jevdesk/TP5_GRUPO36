@@ -3,23 +3,43 @@
 <head>
 <meta charset="utf-8">
 <title>Beneficios</title>
-<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>	
+<link rel="stylesheet" type="text/css"
+	th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
 <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 </head>
 <body class="container">
 	<!-- header -->
 	<header th:replace="layouts/header :: header"></header>
-	
+
 	<!-- nav -->
-	
-	
+
+
 	<!-- section -->
-	<section>
-		<p> <strong>Página en construcción...</strong> </p>
+	<section class="container-sm-form">
+		<table class="table table-striped table-dark">
+			<thead>
+				<tr>
+					<th scope="col">Codigo</th>
+					<th scope="col">Nombre de Curso</th>
+					<th scope="col">Fecha de Inicio</th>
+					<th scope="col">Fecha de Cierre</th>
+					<th scope="col">Estado</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="beca : ${beneficiados}">
+					<td th:text="${beca.codigo}"></td>
+					<td th:text="${beca.curso.titulo}"></td>
+					<td th:text="${beca.fechaInicio}"></td>
+					<td th:text="${beca.fechaCierre}"></td>
+					<td th:text="${beca.estado}"></td>
+				</tr>
+			</tbody>
+		</table>
 	</section>
-	
+
 	<!-- footer -->
 	<footer th:replace="layouts/footer :: footer"></footer>
-	
+
 </body>
 </html>
