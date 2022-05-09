@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html lang='es'>
+<html lang='es' xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8">
 </head>
 <body>
 	<header>
-		<img class="logo" alt="logo" src="./imagenes/logo_unju.jpg" title="logo-unju">
-		<h1>Instituto Informático Jujuy</h1>		
+	<div class="container-fluid navbar-light bg-light">
+	<a class="navbar-brand " href="/">
+		<img class="logo d-inline-block align-text-top" alt="logo" src="./imagenes/logo_unju.jpg" title="logo-unju">
+		Instituto Informático Jujuy
+		 </a>
+  	</div>
+     <nav th:replace="layouts/nav :: nav"></nav>
+   
 	</header>
+	
 
+</nav>
 </body>
 </html>
