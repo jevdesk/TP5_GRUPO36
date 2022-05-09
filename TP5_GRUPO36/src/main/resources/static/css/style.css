@@ -2,10 +2,32 @@ body {
   font-family: "Recursive", sans-serif;
 }
 
-
+.encabezado a{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+}
 .logo {
+	
 	height: 2.5em;
-	margin-right: 1em;
+	margin: 0.5em;
+}
+
+.encabezado a p{
+	margin:0;
+}
+.text-curso{
+	background: rgb(27, 34, 30,0.5);
+	border-radius: 0.15em;
+}
+.lista-cursos{
+	padding:0.5em;
+	background-image: url("../imagenes/background.png");
+	
+}
+.list-link{
+	text-decoration: none;
+	color:#24303c
 }
 
 form{
@@ -18,6 +40,8 @@ footer {
 
 
 #form{
+	margin-left: auto;
+	margin-right: auto;
 	padding: 30px;
 	background-color: #24303c;
 	color: white;
@@ -47,9 +71,10 @@ footer {
 
 .container-sm-form{
 	margin: auto;
+	padding-top:3em;
+	padding-bottom: 1em;
 	width: 100%;
 	height: 100%;
-	padding: 170px;
 	background-image: url("../imagenes/background.png");
 	background-size: 100%;
 }
