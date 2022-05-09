@@ -12,16 +12,41 @@
 	<header th:replace="layouts/header :: header"></header>
 	
 	
-	<section>
-		<h2>Cursos con inscripción abierta</h2>
-		<ol>
-			<li><a href="#">Idiomas</a></li>
-			<li><a href="/design">Diseño</a></li>
-			<li><a href="#">Desarrollo</a></li>
-			<li><a href="#">Marketing</a></li>
-			<li><a href="#">Conferencias</a></li>
-		</ol>
+	<main class="lista-cursos">
+	<section class="mt-2 mb-2 me-auto ms-auto w-50">
+		<h3 class="text-center text-white fw-bolder text-curso">Cursos con inscripción abierta</h3>
+		<ol class="list-group list-group-numbered shadow-lg">
+  <li class="list-group-item d-flex justify-content-between align-items-start list-group-item-dark">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold"><a class="list-link" href="/design">Idioma</a></div>
+      Cursos de idioma
+    </div>
+  </li>
+  
+  <li class="list-group-item d-flex justify-content-between align-items-start list-group-item-dark">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold"><a class="list-link" href="/design">Diseño</a></div>
+      Cursos de diseño
+    </div>
+    
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start list-group-item-dark">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold"><a class="list-link" href="/design">Desarrollo</a></div>
+      cursos de desarrollo
+    </div>
+    
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start list-group-item-dark">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold"><a class="list-link" href="/design">Conferencias</a></div>
+      Diversos temas
+    </div>
+    
+  </li>
+</ol>
 	</section>
+	</main>
 	
 	<footer th:replace="layouts/footer :: footer"></footer>
 	
