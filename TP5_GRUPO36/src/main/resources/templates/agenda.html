@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="utf-8">
 	<title>Agenda</title>
 	<!--hoja de estilos-->
 	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 	<!--Bootstrap  -->
 	<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+
 </head>
 <body class="container" style="width: 100%; height: 100% ;">
 
 	<header th:replace="layouts/header :: header"></header>
 	
 	<nav th:replace="layouts/nav :: nav"></nav>
+
 	<div class="container-sm-form" id="agendaCenter">
 		<div id="agendaCenter" class="row justify-content-md-center">
 			<video src="./videos/Homero estudiando.mp4" class="col-md-9 col-12" controls="controls">
@@ -22,7 +25,9 @@
 			</section>
 		</div>
 	</div>
+
 	<footer th:replace="layouts/footer :: footer"></footer>
+	<script src="@{/webjars/bootstrap/js/bootstrap.bundle.min.css}"></script>
 	
 	<!--Bootstrap JS  -->
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
