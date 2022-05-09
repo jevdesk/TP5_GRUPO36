@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='es'>
+<html lang='es' xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8">
 <title>Insert title here</title>
@@ -11,7 +11,7 @@
 
 	<header th:replace="layouts/header :: header"></header>
 	
-	<nav th:replace="layouts/nav :: nav"></nav>
+	
 	<section>
 		<h2>Cursos con inscripción abierta</h2>
 		<ol>
@@ -24,6 +24,6 @@
 	</section>
 	
 	<footer th:replace="layouts/footer :: footer"></footer>
-	<script src="@{/webjars/bootstrap/js/bootstrap.bundle.min.css}"></script>
+	
 </body>
 </html>
