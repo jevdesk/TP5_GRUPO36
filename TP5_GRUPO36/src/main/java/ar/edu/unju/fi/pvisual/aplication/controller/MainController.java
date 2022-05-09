@@ -2,6 +2,7 @@ package ar.edu.unju.fi.pvisual.aplication.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import ar.edu.unju.fi.pvisual.aplication.util.ListaCursos;
@@ -38,5 +39,10 @@ public class MainController {
 		model.addObject("cursos", losCursos.getCursos());//objeto cursos para html
 		return model;
 	}
+	
+	@RequestMapping("/formulario")
+    public String capturar() {
+        return "contacto";
+    }
 	
 }
