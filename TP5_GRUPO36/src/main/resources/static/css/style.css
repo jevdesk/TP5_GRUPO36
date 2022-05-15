@@ -38,8 +38,7 @@ footer {
 }
 
 
-
-#form{
+#form, #formBeca{
 	margin-left: auto;
 	margin-right: auto;
 	padding: 30px;

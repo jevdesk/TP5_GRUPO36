@@ -2,13 +2,21 @@ package ar.edu.unju.fi.pvisual.aplication.model;
 
 import java.time.LocalDate;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 
 public class Beca {
 	
 	private int codigo;
+	
 	private Curso curso;
+	
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaInicio;
+	
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaCierre;
+	
 	private String estado;
 	
 	public Beca() {
