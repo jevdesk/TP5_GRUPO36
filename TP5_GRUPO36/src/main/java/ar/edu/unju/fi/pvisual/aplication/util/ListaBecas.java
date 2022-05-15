@@ -9,7 +9,7 @@ import ar.edu.unju.fi.pvisual.aplication.model.Beca;
 /**
  * Clase que permite crear una lista de objetos Becas
  * y también tiene un atributo que inicializa una lista de cursos
- * @author arielguti - G36 *
+ * @author arielguti - G36
  */
 public class ListaBecas {
 	
@@ -23,19 +23,17 @@ public class ListaBecas {
 	/**
 	 * Constructor por defecto que carga el atributo ListaBeca
 	 */
-	public ListaBecas() {		
+	public ListaBecas() {
+		//listaBecas = new ArrayList<>();
 		cargarListaBecas();
 	}
 
-	/**
-	 * Procedimiento que permite cargar el atributo tipo lista listaBecas
-	 */
+
+	//Procedimiento que permite cargar el atributo tipo lista listaBecas
 	public void cargarListaBecas() {
 		listaBecas = new ArrayList<>();
 		Beca beca1 = new Beca(1,listaCursos.getCursos().get(0),LocalDate.of(2020,04,20),LocalDate.of(2021, 04, 20),"Activo");
-		Beca beca2 = new Beca(2,listaCursos.getCursos().get(1),LocalDate.of(2020,04,20),LocalDate.of(2021, 04, 20),"Pendiente");
 		listaBecas.add(beca1);
-		listaBecas.add(beca2);
     }
 	
 	/**
