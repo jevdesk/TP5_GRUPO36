@@ -90,7 +90,7 @@ public class Curso {
 		this.cantidadHoras = cantidadHoras;
 	}
 	
-	public String isModalidad() {
+	public String getModalidad() {
 		return modalidad;
 	}
 	

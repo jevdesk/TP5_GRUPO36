@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Lista De Cursos</title>
+		<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+	</head>
+	
+	<body class="container" style="padding: 50px;">
+		<header th:replace="/layouts/header :: header"></header>
+		<div class="container">
+			<br>
+			<p class="h4 mb-10">Cursos</p>
+			<br>
+			<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+			   <a th:href="@{/curso/nuevo}" id="nuevo" class="btn btn-primary">Nuevo</a>
+			</div>
+			<br>
+			<div class="col-12 d-flex justify-content-center">
+				<table  class="table table-striped table-hover">
+						<tr>
+							<th>codigo</th>
+							<th>titulo</th>                    
+							<th>categoria</th>
+							<th>fechaInicio</th>
+							<th>fechaFinal</th>
+							<th>cantidadHoras</th>
+							<th>modalidad</th>
+							<th>docente</th>
+						</tr>	
+						<tr th:each="c: ${curso}">
+							<td th:text="${c.codigo}"></td>
+							<td th:text="${c.titulo}"></td>
+							<td th:text="${c.categoria}"></td>
+							<td th:text="${#temporals.format(c.fechaInicio,'dd/MM/yyyy')}"></td>
+							<td th:text="${#temporals.format(c.fechaInicio,'dd/MM/yyyy')}"></td>
+						    <td th:text="${c.cantidadHoras}"></td>
+							<!-- <td th:text="${c.modalidad}"></td> -->
+							<!-- <td th:text="${c.docente.apellido}"></td> -->
+							<td>
+							<a href="#" id="editarCurso" class="btn btn-warning">Editar</a>
+							<a href="#" id="eliminarCurso" class="btn btn-danger">Eliminar</a>
+						</td>
+						</tr>
+					</table>
+				<br><br>
+				
+			</div>
+		
+		</div>
+		<footer th:replace="/layouts/footer :: footer"></footer>
+		<script type="text/javascript" th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+		<script type="text/javascript" th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script>
+		<script type="text/javascript" th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.min.js}"></script>
+	</body>
+</html>
