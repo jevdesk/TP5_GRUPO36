@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='es' xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Nuevo Curso</title>
+<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body class="container" style="width: 100%; height: 100% ; text-align: center; font-family: monospace;" >
+	<!-- header -->
+	<header th:replace="layouts/header :: header"></header>
+	
+	
+	
+	<h1>Alta Curso</h1>
+	
+	<!-- formulario Curso-->
+	<div class="container-sm-form" id="formulario-curso">
+		 	
+			<!-- referencia al controlador  -->
+		  <form th:action="@{/curso/guardar}" method="POST" th:object="${curso}" class="row g-3" id="form-c">
+		  	  <h5>Agregar los datos del nuevo Curso</h5>
+			  <div class="row mb-3">
+			  	<label class="col-2" >Codigo</label>
+			  	<div class="col-md-10">
+			    	<input th:field="*{codigo}" type="text" class="form-control" id="inputCodigo" placeholder="Codigo">
+			  	</div>
+			  </div>
+			  
+			  <div class="row mb-3">
+			  		<label class="col-2">Titulo</label>
+				    <div class="col-md-10">
+				    	<input th:field="*{titulo}" type="text" class="form-control"  id="inputTitulo" placeholder="Titulo">
+				    </div>
+			  </div>
+			  
+			  <div class="row mb-3">
+			  		<label class="col-2">Categoria</label>
+				    <div class="col-10">
+			    		<input th:field="*{categoria}" type="text" class="form-control"  id="inputCategoria"  placeholder="Categoria">
+			  		</div>
+			  </div>
+			  
+			  
+			  
+			  <div class="row mb-3">
+			  		<label class="col-2">fechaInicio</label>
+				    <div class="col-10">
+			   	 		<input th:field="*{fechaInicio}" type="date" class="form-control" id="inputInicio" placeholder="Fecha de Inicio">
+			  		</div>	
+			  </div>
+			  
+			  <div class="row mb-3">
+			  		<label class="col-2">fechaFinal</label>
+				    <div class="col-10">
+			    		<input th:field="*{fechaFinal}" type="date" class="form-control" id="inputFin" placeholder="Fecha de Cierre">
+			  		</div>
+			  </div>
+			  
+			  <div class="row mb-3">
+			  		<label class="col-2">cantidadHoras</label>
+				    <div class="col-10">
+			    		<input th:field="*{cantidadHoras}" type="number" class="form-control" id="inputHoras" placeholder="Cantidad de Horas">
+			  		</div>
+			  </div>
+			  
+			  <div class="row mb-3">
+			  		<label class="col-2">modalidad</label>
+				    <div class="col-10">
+					    <select th:field="*{modalidad}" type="text" class="form-control"  id="inputModalidad" placeholder="Modalidad">
+					    	<option value="Activo">Presencial</option>
+						  	<option value="Pendiente">Virtual</option>	
+					    </select>
+			 		 </div>	
+			  </div>
+			  
+			  
+			 <div class="row mb-3">
+			  		<label class="col-2">docente</label>
+				    <div class="col-10">
+					    <select th:field="*{docente}" id="cmbDocente" class="form-select">
+					    	<option th:each="d:${docente}" 
+					    			th:value="${d.legajo}" 
+					    			th:text="${d.apellido}"/>
+					    			    		
+					    	</option>			    	
+					    </select>
+					    
+			 	   </div>
+			  </div>
+			  
+			  <div class="col-6" id="btn-c" style="display: flex;">
+			    <button type="submit" class="btn btn-primary">Enviar</button>
+			    <a style="margin-left: 5px;" th:href="@{/}" id="cancel" class="btn btn-secondary">Cancelar</a>
+			  </div>
+			</form>
+	</div>
+	
+	<!-- footer -->
+	<footer th:replace="layouts/footer :: footer"></footer>
+	</body>
+</html>

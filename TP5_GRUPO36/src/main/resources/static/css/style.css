@@ -50,10 +50,27 @@ footer {
 	box-shadow: 7px 13px 37px #000;	
 }
 
+
+/* formulario Contacto */
+#form{
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30px;
+	background-color: #24303c;
+	color: white;
+	border-radius: 20px;
+	font-size: 15px;
+	font-family:'calibri';
+	box-shadow: 7px 13px 37px #000;	
+	border: 2px solid #24303c;
+	width: 100vh;
+}
+/* etiqueta casillas */
 #form .form-label{
 	padding-left: 5px;
 }
 
+/* input casillas */
 #form .form-control{
 	padding: 12px;
 	border: solid 1px #0B0954 ;
@@ -61,6 +78,7 @@ footer {
 	color: white;	
 }
 
+/* casilla de eleccion */
 #form .form-select{
 	padding: 12px;
 	border: solid 1px #0B0954 ;
@@ -68,6 +86,7 @@ footer {
 	color: white;
 }
 
+/* contenedor de formulario */
 .container-sm-form{
 	margin: auto;
 	padding-top:3em;
@@ -77,6 +96,23 @@ footer {
 	background-image: url("../imagenes/background.png");
 	background-size: 100%;
 }
+
+
+#form-c{
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30px;
+	background-color: #24303c;
+	color: white;
+	border-radius: 20px;
+	font-size: 15px;
+	font-family:'calibri';
+	box-shadow: 7px 13px 37px #000;	
+	border: 2px solid #24303c;
+	width: 100vh;
+}
+
+
 
 
 /* Zona de agenda.html */
