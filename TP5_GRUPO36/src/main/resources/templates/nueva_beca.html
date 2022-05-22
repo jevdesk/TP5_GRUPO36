@@ -11,7 +11,7 @@
 	<!-- header -->
 	<header th:replace="layouts/header :: header"></header>	
 	
-	<!-- formulario de beca -->
+	<!-- Beca's Form -->
 	<div class="container-sm-form">
 		
 		  <form th:action="@{/beca/guardar}" method="post" th:object="${beca}" class="col-md-9" id="formBeca">
@@ -20,14 +20,19 @@
 			    <label for="inputCod" class="col-sm-4 col-md-3 col-form-label">Código de beca</label>
 			    <div class="col-sm-8 col-md-9">
 			    	<input th:field="*{codigo}" type="number" class="form-control" id="inputCod" placeholder="Número de código">
+			    	<!-- mostrar el message de error asociado con la validación del código -->
+			    	<div class="text-danger" th:errors="*{codigo}"></div>
 			  	</div>
 			 </div>
 			 <div class="row mb-3">
 			    <label for="cmbCurso" class="col-sm-4 col-md-3 col-form-label">Curso</label>
 			    <div class="col-sm-8 col-md-9">			    
-			    <select id="cmbCurso" class="form-select">
-			    	<option th:each="c:${cursos}" th:value="${c.codigo}" th:field="*{curso.titulo}" th:selected=true>
-			    		<spam th:text="${c.titulo}"></spam>			    		
+			    <select th:field="*{curso.titulo}" id="cmbCurso" class="form-select">
+			    	<option th:each="c : ${cursos}"
+			    			th:value="${c.titulo}"
+			    			th:text="${c.titulo}"
+			    			th:selected=true>
+							<!--	<spam th:text="${c.titulo}"></spam>  	 -->
 			    	</option>			    	
 			    </select>
 			    </div>
@@ -35,14 +40,16 @@
 			 <div class=" row mb-3">
 			    <label for="txtFecha1" class="col-sm-4 col-md-3 col-form-label">Fecha de Inicio</label>
 			    <div class="col-sm-8 col-md-9">
-			    <input th:field="*{fechaInicio}" type="date" class="form-control" id="txtFecha1" placeholder="Fecha Inicial">
+			    	<input th:field="*{fechaInicio}" type="date" class="form-control" id="txtFecha1" placeholder="Fecha Inicial">
+			    	<div class="text-danger" th:errors="*{fechaInicio}"></div>
 			    </div>
 			 </div>  
 			 
 			  <div class="row mb-3">
 			    <label for="txtFecha2" class="col-sm-4 col-md-3 col-form-label">Fecha de Cierre</label>
 			    <div class="col-sm-8 col-md-9">
-			    <input th:field="*{fechaCierre}" type="date" class="form-control" id="txtFecha2" placeholder="Fecha Final">
+			    	<input th:field="*{fechaCierre}" type="date" class="form-control" id="txtFecha2" placeholder="Fecha Final">
+			    	<div class="text-danger" th:errors="*{fechaCierre}"></div>
 			    </div>
 			  </div>
 			  <div class="row mb-3">

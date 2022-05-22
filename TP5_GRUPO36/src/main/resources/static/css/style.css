@@ -113,8 +113,6 @@ footer {
 }
 
 
-
-
 /* Zona de agenda.html */
 #agendaCenter{
 	padding:40px
@@ -129,4 +127,9 @@ footer {
 	font-size:large;
 	color: white;
 	font-family:Candara, Century Gothic,Lucida Calligraphy, Monotype Corsiva;
+}
+
+.listado{
+	padding:20px;
+	min-height: 60vh;
 }
