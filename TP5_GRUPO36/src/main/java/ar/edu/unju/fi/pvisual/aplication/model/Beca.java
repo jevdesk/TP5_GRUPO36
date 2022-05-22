@@ -2,25 +2,36 @@ package ar.edu.unju.fi.pvisual.aplication.model;
 
 import java.time.LocalDate;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
 import org.springframework.format.annotation.DateTimeFormat;
 
 
 public class Beca {
 	
+	@NotNull
+	@Min(value = 1111,message = "El código de la beca debe ser mayor a 1111")
 	private int codigo;
 	
 	private Curso curso;
 	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@NotNull(message = "Seleccione o teclee Fecha de Inicio")
 	private LocalDate fechaInicio;
 	
+	@NotNull(message = "Seleccione o teclee Fecha de Cierre")
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaCierre;
 	
 	private String estado;
 	
+	
+	/**
+	 * Constructor por defecto de Beca que inicializa al atributo Curso
+	 */
 	public Beca() {
-		
+		curso = new Curso();
 	}
 	
 	/**
