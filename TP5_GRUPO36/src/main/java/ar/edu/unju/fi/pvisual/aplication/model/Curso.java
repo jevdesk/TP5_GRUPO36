@@ -2,17 +2,67 @@ package ar.edu.unju.fi.pvisual.aplication.model;
 
 import java.time.LocalDate;
 
+import javax.validation.constraints.Future;
+import javax.validation.constraints.FutureOrPresent;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+
+
 
 public class Curso {
 	
+	/*
+	 * @NotEmpty(message = "el campo no puede estar vacio") private int codigo;
+	 * 
+	 * @Size(min=3,max=30, message = "el campo debe terner entre 3 y 30 letras" )
+	 * 
+	 * @NotEmpty(message = "el campo no puede estar vacio") private String titulo;
+	 * 
+	 * @Size(min=3,max=30, message = "el campo debe terner entre 3 y 30 letras" )
+	 * 
+	 * @NotEmpty(message = "el campo no puede estar vacio") private String
+	 * categoria;
+	 * 
+	 * @DateTimeFormat(pattern = "yyyy-MM-dd") private LocalDate fechaInicio;
+	 * 
+	 * @DateTimeFormat(pattern = "yyyy-MM-dd") private LocalDate fechaFinal;
+	 * 
+	 * @Min(value = 1) @Max(value = 100) private int cantidadHoras;
+	 * 
+	 * @Size(min=3,max=30, message = "el campo debe terner entre 3 y 30 letras" )
+	 * 
+	 * @NotEmpty(message = "el campo no puede estar vacio") private String
+	 * modalidad;
+	 * 
+	 * @NotNull(message="Debe seleccionar un docente") private Docente docente;
+	 * 
+	 */
+	
+	@Min(value=1, message="El valor mínimo es 1") @Max(value=9999,message="El valor máximo permitido es 9999")
 	private int codigo;
+	@NotEmpty(message="El título no puede ser vacío")
 	private String titulo;
-	private String categoria;
+	@NotNull @FutureOrPresent(message="La fecha debe ser hoy o posterior")
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private LocalDate fechaInicio;
+	@NotNull @Future(message="La fecha debe ser posterior a la actual")
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private LocalDate fechaFinal;
+	@Min(value=1,message="Cantidad de horas debe ser mayor a 1")
 	private int cantidadHoras;
+	@NotEmpty(message="Modalidad no puede ser vacío")
 	private String modalidad;
+	@NotNull(message="Debe seleccionar un docente")
 	private Docente docente;
+	@NotEmpty(message="Categoría no puede ser vacío")
+	private String categoria;
 	
 	public Curso() {
 		
@@ -41,6 +91,7 @@ public class Curso {
 		this.modalidad = modalidad;
 		this.docente = docente;
 	}
+	
 
 	public int getCodigo() {
 		return codigo;
