@@ -2,7 +2,7 @@ package ar.edu.unju.fi.pvisual.aplication.util;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Optional;
 
 import ar.edu.unju.fi.pvisual.aplication.model.Docente;
 
@@ -30,6 +30,10 @@ public class ListaDocentes {
 		this.listaDocentes = listaDocentes;
 	}
 	
+	public Docente buscarDocente(int legajo) {
+		Optional<Docente> docente = getListaDocentes().stream().filter(d -> d.getLegajo() == legajo).findFirst();
+		return docente.get();
+	}
 
 
 }

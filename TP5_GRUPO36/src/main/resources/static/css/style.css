@@ -97,7 +97,7 @@ footer {
 	background-size: 100%;
 }
 
-
+/* formulario de nuevo curso */
 #form-c{
 	margin-left: auto;
 	margin-right: auto;
@@ -105,8 +105,8 @@ footer {
 	background-color: #24303c;
 	color: white;
 	border-radius: 20px;
-	font-size: 15px;
-	font-family:'calibri';
+	font-size: 18px;
+	font-family:monospace;
 	box-shadow: 7px 13px 37px #000;	
 	border: 2px solid #24303c;
 	width: 100vh;
