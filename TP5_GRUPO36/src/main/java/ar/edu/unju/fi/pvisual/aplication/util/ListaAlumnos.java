@@ -19,10 +19,10 @@ public class ListaAlumnos {
 	 */
 	public ListaAlumnos() {
 		listaAlumnos = new ArrayList<>();
-		Alumno alumno1 = new Alumno(30303090,"Ariel","Mamaní","arielguti111@gmail.com",4496476);
-		Alumno alumno2 = new Alumno(33333333,"José","Acosta","arielguti111@gmail.com",4496476);
-		Alumno alumno3 = new Alumno(33333333,"Jonathan","Vera","arielguti111@gmail.com",4496476);
-		Alumno alumno4 = new Alumno(33333333,"Alejandro","Gallardo","arielguti111@gmail.com",4496476);
+		Alumno alumno1 = new Alumno(30303090,"Ariel","Mamaní","arielguti111@gmail.com","4496476");
+		Alumno alumno2 = new Alumno(33333333,"José","Acosta","arielguti111@gmail.com","4496476");
+		Alumno alumno3 = new Alumno(33333333,"Jonathan","Vera","arielguti111@gmail.com","4496476");
+		Alumno alumno4 = new Alumno(33333333,"Alejandro","Gallardo","arielguti111@gmail.com","4496476");
 		listaAlumnos.add(alumno1);
 		listaAlumnos.add(alumno2);
 		listaAlumnos.add(alumno3);
