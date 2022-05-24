@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='es' xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Nuevo Alumno</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+
+</head>
+
+<body class="container">
+	<!-- header -->
+	<header th:replace="layouts/header :: header"></header>
+	
+	
+	
+	<!-- formulario Curso-->
+	<div class="container-sm-form">
+		 <h2 class="text-center text-white">Alta Alumno</h2 >	
+		 <br>
+			<!-- referencia al controlador  -->
+		  <form th:action="@{/alumno/guardar}" method="post" th:object="${alumno}" class="row g-3" id="form-c">
+		  	  <h5>Agregar los datos del nuevo Alumno</h5>
+		  	  <br></br>
+		  	 
+			 
+			 
+			  <div class="row mb-3">
+			  	<label class="col-4" >DNI</label>
+			  	<div class="col-md-8">
+			    	<input th:field="*{dni}" type="number" class="form-control" id="inputCodigo" placeholder="DNI">
+			    	<div class="text-danger" th:if="${#fields.hasErrors('dni')}" th:errors="*{dni}"></div>
+			  	</div>
+			  </div><div class="row mb-3">
+			  	<label class="col-4" >Nombre</label>
+			  	<div class="col-md-8">
+			    	<input th:field="*{nombre}" type="text" class="form-control" id="inputCodigo" placeholder="Su Nombre">
+			    	<div class="text-danger" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></div>
+			  	</div>
+			  </div><div class="row mb-3">
+			  	<label class="col-4" >Apellido</label>
+			  	<div class="col-md-8">
+			    	<input th:field="*{apellido}" type="text" class="form-control" id="inputCodigo" placeholder="Su apellido">
+			    	<div class="text-danger" th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}"></div>
+			  	</div>
+			  </div><div class="row mb-3">
+			  	<label class="col-4" >Correo</label>
+			  	<div class="col-md-8">
+			    	<input th:field="*{email}" type="text" class="form-control" id="inputCodigo" placeholder="Su email">
+			    	<div class="text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+			  	</div>
+			  </div><div class="row mb-3">
+			  	<label class="col-4" >Teléfono</label>
+			  	<div class="col-md-8">
+			    	<input th:field="*{telefono}" type="text" class="form-control" id="inputCodigo" placeholder="Su telefono">
+			    	<div class="text-danger" th:if="${#fields.hasErrors('telefono')}" th:errors="*{telefono}"></div>
+			  	</div>
+			  </div>
+			  
+			  
+			  <div class="col-6" id="btn-c" style="display: flex;">
+			    <button type="submit" class="btn btn-primary">Enviar</button>
+			    <a style="margin-left: 5px;" th:href="@{/}" id="cancel" class="btn btn-secondary">Cancelar</a>
+			  </div>
+			   
+		</form>
+	</div>
+	
+	<!-- footer -->
+	<footer th:replace="layouts/footer :: footer"></footer>
+	
+	</body>
+</html>
