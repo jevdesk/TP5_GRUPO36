@@ -27,9 +27,9 @@
 			 <div class="row mb-3">
 			    <label for="cmbCurso" class="col-sm-4 col-md-3 col-form-label">Curso</label>
 			    <div class="col-sm-8 col-md-9">			    
-			    <select th:field="*{curso.titulo}" id="cmbCurso" class="form-select">
+			    <select th:field="*{curso.codigo}" id="cmbCurso" class="form-select">
 			    	<option th:each="c : ${cursos}"
-			    			th:value="${c.titulo}"
+			    			th:value="${c.codigo}"
 			    			th:text="${c.titulo}"
 			    			th:selected=true>
 							<!--	<spam th:text="${c.titulo}"></spam>  	 -->

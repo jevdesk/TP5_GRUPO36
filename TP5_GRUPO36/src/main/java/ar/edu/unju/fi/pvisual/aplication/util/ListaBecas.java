@@ -18,13 +18,13 @@ public class ListaBecas {
 	/**
 	 * Atributo que permite acceder a la lista de Cursos
 	 */
-	private ListaCursos listaCursos = new ListaCursos();
+	//private ListaCursos listaCursos = new ListaCursos();
 	
 	/**
 	 * Constructor por defecto que carga el atributo ListaBeca
 	 */
 	public ListaBecas() {
-		//listaBecas = new ArrayList<>();
+		//listaBecas = new ArrayList<Beca>();
 		cargarListaBecas();
 	}
 
@@ -32,6 +32,7 @@ public class ListaBecas {
 	//Procedimiento que permite cargar el atributo tipo lista listaBecas
 	public void cargarListaBecas() {
 		listaBecas = new ArrayList<>();
+		ListaCursos listaCursos = new ListaCursos();
 		Beca beca1 = new Beca(1,listaCursos.getCursos().get(0),LocalDate.of(2020,04,20),LocalDate.of(2021, 04, 20),"Activo");
 		listaBecas.add(beca1);
     }
