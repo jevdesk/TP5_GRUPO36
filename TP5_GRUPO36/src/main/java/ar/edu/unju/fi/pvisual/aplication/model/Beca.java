@@ -2,6 +2,8 @@ package ar.edu.unju.fi.pvisual.aplication.model;
 
 import java.time.LocalDate;
 
+import javax.validation.constraints.Future;
+import javax.validation.constraints.FutureOrPresent;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
@@ -18,10 +20,12 @@ public class Beca {
 	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@NotNull(message = "Seleccione o teclee Fecha de Inicio")
+	@FutureOrPresent(message = "Ingrese fecha actual o futura")
 	private LocalDate fechaInicio;
 	
 	@NotNull(message = "Seleccione o teclee Fecha de Cierre")
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@Future(message = "La fecha debe ser posterior")
 	private LocalDate fechaCierre;
 	
 	private String estado;
@@ -31,7 +35,7 @@ public class Beca {
 	 * Constructor por defecto de Beca que inicializa al atributo Curso
 	 */
 	public Beca() {
-		curso = new Curso();
+		//curso = new Curso();
 	}
 	
 	/**
