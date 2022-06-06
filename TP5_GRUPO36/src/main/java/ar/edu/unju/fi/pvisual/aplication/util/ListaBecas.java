@@ -4,6 +4,9 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import ar.edu.unju.fi.pvisual.aplication.model.Beca;
 
 /**
@@ -11,6 +14,7 @@ import ar.edu.unju.fi.pvisual.aplication.model.Beca;
  * y también tiene un atributo que inicializa una lista de cursos
  * @author arielguti - G36
  */
+@Service
 public class ListaBecas {
 	
 	private List<Beca> listaBecas;

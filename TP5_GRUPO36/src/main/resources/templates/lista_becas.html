@@ -39,8 +39,8 @@
 						<td th:text="${#temporals.format(beca.fechaCierre,'dd/MM/yyyy')}"></td>
 						<td th:text="${beca.estado}"></td>
 						<td>
-							<button type="button" class="btn btn-warning">Editar</button>
-							<button type="button" class="btn btn-danger">Eliminar</button>
+							<a th:href="@{/beca/editar/}+${beca.codigo}" type="button" class="btn btn-warning" >Editar</a>
+							<a th:href="@{/beca/eliminar/}+${beca.codigo}" type="button" class="btn btn-danger">Eliminar</a>
 						</td>
 					</tr>
 				</tbody>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='es' xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<title>Modificar Beca</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>	
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body class="container">
+	<!-- header -->
+	<header th:replace="layouts/header :: header"></header>	
+	
+	<!-- Beca's Form -->
+	<div class="container-sm-form">
+		
+		  <form th:action="@{/beca/modificar}" method="post" th:object="${beca}" class="col-md-9" id="formBeca">
+		  	<h3 style="padding: 10px">MODIFICACIÓN DE LA BECA</h3>			
+			<div class="row mb-3">
+			    <label for="inputCod" class="col-sm-4 col-md-3 col-form-label">Código de beca</label>
+			    <div class="col-sm-8 col-md-9">
+			    	<input th:field="*{codigo}" class="form-control" id="inputCod" placeholder="Número de código">
+			  	</div>
+			 </div>
+			 <div class="row mb-3">
+			    <label for="cmbCurso" class="col-sm-4 col-md-3 col-form-label">Curso</label>
+			    <div class="col-sm-8 col-md-9">			    
+			    <select th:field="*{curso.codigo}" id="cmbCurso" class="form-select">
+			    	<option th:each="c : ${cursos}"
+			    			th:value="${c.codigo}"
+			    			th:text="${c.titulo}"
+			    			th:selected=true>
+							<!--	<spam th:text="${c.titulo}"></spam>  	 -->
+			    	</option>			    	
+			    </select>
+			    </div>
+			 </div>
+			 <div class=" row mb-3">
+			    <label for="txtFecha1" class="col-sm-4 col-md-3 col-form-label">Fecha de Inicio</label>
+			    <div class="col-sm-8 col-md-9">
+			    	<input th:field="*{fechaInicio}" type="date" class="form-control" id="txtFecha1" placeholder="Fecha Inicial">
+			    	<!-- mostrar el message de error asociado con la validación de fecha -->
+			    	<div class="text-danger" th:errors="*{fechaInicio}"></div>
+			    </div>
+			 </div>  
+			 
+			  <div class="row mb-3">
+			    <label for="txtFecha2" class="col-sm-4 col-md-3 col-form-label">Fecha de Cierre</label>
+			    <div class="col-sm-8 col-md-9">
+			    	<input th:field="*{fechaCierre}" type="date" class="form-control" id="txtFecha2" placeholder="Fecha Final">
+			    	<div class="text-danger" th:errors="*{fechaCierre}"></div>
+			    </div>
+			  </div>
+			  <div class="row mb-3">
+			    <label for="cmbEstado" class="col-sm-4 col-md-3 col-form-label">Estado</label>
+			    <div class="col-sm-8 col-md-9">		    
+			    <select th:field="*{estado}" id="cmbEstado" class="form-select">
+			      <option value="Activo">Activo</option>
+				  <option value="Pendiente">Pendiente</option>
+				  <option value="Suspendido">Suspendido</option>				  
+			    </select>
+			    </div>
+			 </div>
+
+			<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+				<button class="btn btn-primary me-md-2" type="submit">Modificar</button>
+				<a th:href="@{/beca/listado}" class="btn btn-secondary" type="reset">Cancelar</a>
+			</div>
+		</form>
+	</div>
+	
+	<!-- footer -->
+	<footer th:replace="layouts/footer :: footer"></footer>
+</body>
+</html>
