@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import ar.edu.unju.fi.pvisual.aplication.model.Docente;
 
+@Service
 public class ListaDocentes {
 	
 	private ArrayList<Docente> listaDocentes;

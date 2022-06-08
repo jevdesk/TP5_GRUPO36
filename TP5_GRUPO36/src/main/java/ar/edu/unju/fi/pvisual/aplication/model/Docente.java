@@ -1,13 +1,35 @@
 package ar.edu.unju.fi.pvisual.aplication.model;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Docente {
 	
+	@NotNull
+	@Min(value = 1000,message = "El número de Legajo debe ser mayor a 1000")
 	private int legajo;
+	
+	@Size(min=2, max=60, message="El(Los) Nombre(s) debe(n) tener entre 2 a 60 caracteres")
+	@NotEmpty(message="Debe ingresar por lo menos un Nombre")
 	private String nombre;
+	
+	@Size(min=2, max=60, message="El(Los) Apellido(s) debe(n) tener entre 3 a 60 caracteres")
+	@NotEmpty(message="Debe ingresar por lo menos un apellido")
 	private String apellido;
+	
+	@NotEmpty(message="El correo electrónico es requerido")
+	@Email(message = "Correo no válido", regexp = "^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$")
 	private String email;
+	
+	@NotNull(message="Debe ingresar un nro de teléfono")
 	private long telefono;
+	
 	
 	public Docente() {
 		

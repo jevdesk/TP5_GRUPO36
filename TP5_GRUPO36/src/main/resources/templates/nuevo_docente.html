@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<title>Nuevo Docente</title>	
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">	
+	<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body class="container">
+	
+	<!-- header -->
+	<header th:replace="layouts/header :: header"></header>	
+	
+	<!-- Beca's Form -->
+	<div class="container-sm-form">
+		
+		  <form th:action="@{/docente/guardar}" method="post" th:object="${docente}" class="col-md-9" id="formBeca">
+		  	<h3 style="padding: 10px">DATOS DE DOCENTE</h3>			
+			<div class="row mb-3">
+			    <label for="txtLegajo" class="col-sm-4 col-md-3 col-form-label">Nro. de Legajo</label>
+			    <div class="col-sm-8 col-md-9">
+			    	<input th:field="*{legajo}" type="number" class="form-control" id="txtLegajo" placeholder="Número de Legajo">
+			    	<!-- mostrar el message de error asociado con la validación del nro. de Legajo -->
+			    	<div class="text-danger" th:errors="*{legajo}"></div>
+			  	</div>
+			 </div>
+			 
+			 <div class=" row mb-3">
+			    <label for="txtApellido" class="col-sm-4 col-md-3 col-form-label">Apellido</label>
+			    <div class="col-sm-8 col-md-9">
+			    	<input th:field="*{apellido}" type="text" class="form-control" id="txtApellido" placeholder="Ingrese Apellido/s">
+			    	<div class="text-danger" th:errors="*{apellido}"></div>
+			    </div>
+			 </div>  
+			 
+			  <div class="row mb-3">
+			    <label for="txtNombre" class="col-sm-4 col-md-3 col-form-label">Nombre</label>
+			    <div class="col-sm-8 col-md-9">
+			    	<input th:field="*{nombre}" type="text" class="form-control" id="txtNombre" placeholder="Ingrese nombre/s">
+			    	<div class="text-danger" th:errors="*{nombre}"></div>
+			    </div>
+			  </div>
+			  <div class="row mb-3">
+			    <label for="txtEmail" class="col-sm-4 col-md-3 col-form-label">E-mail</label>
+			    <div class="col-sm-8 col-md-9">
+			    	<input th:field="*{email}" type="email" class="form-control" id="txtEmail" placeholder="Ingrese correo electrónico">
+			    	<div class="text-danger" th:errors="*{email}"></div>
+			    </div>
+			  </div>
+			  <div class="row mb-3">
+			    <label for="txtTelefono" class="col-sm-4 col-md-3 col-form-label">Teléfono</label>
+			    <div class="col-sm-8 col-md-9">
+			    	<input th:field="*{telefono}" type="number" class="form-control" id="txtTelefono" placeholder="Número de Teléfono fijo o móvil">
+			    	<div class="text-danger" th:errors="*{telefono}"></div>
+			    </div>
+			  </div>
+
+			<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+				<button class="btn btn-primary me-md-2" type="submit">Enviar</button>
+				<button class="btn btn-secondary" type="reset">Cancelar</button>
+			</div>
+		</form>
+	</div>
+	
+	<!-- footer -->
+	<footer th:replace="layouts/footer :: footer"></footer>
+	
+</body>
+</html>
