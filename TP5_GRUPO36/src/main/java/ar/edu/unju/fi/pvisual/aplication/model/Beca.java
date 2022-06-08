@@ -8,8 +8,9 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.stereotype.Component;
 
-
+@Component
 public class Beca {
 	
 	@NotNull
