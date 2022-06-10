@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import ar.edu.unju.fi.pvisual.aplication.model.Curso;
 import ar.edu.unju.fi.pvisual.aplication.model.Docente;
 
@@ -11,6 +13,7 @@ import ar.edu.unju.fi.pvisual.aplication.model.Docente;
  * Clase que permite crear una lista de objetos Cursos
  * @author arielguti - G36 *
  */
+@Component
 public class ListaCursos {
 	
 	private List<Curso> cursos;
