@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang='es' xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Editar - Curso</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+
+</head>
+
+<body class="container" style="width: 100%; height: 100% ; text-align: center; font-family: monospace;" >
+	<!-- header -->
+	<header th:replace="layouts/header :: header"></header>
+	
+	<h1>Editar Curso</h1>
+	
+	<!-- formulario Curso-->
+	<div class="container-sm-form" id="formulario-curso">
+		 	
+			<!-- referencia al controlador  -->
+		  <form th:action="@{/curso/modificar}" method="post" th:object="${curso}" class="row g-3" id="form-c">
+		  	  <h5>Agregar los datos del nuevo Curso</h5>
+		  	  <br></br>
+		  	 
+			  <div class="row mb-3">
+			  	<label class="col-4" >Codigo</label>
+			  	<div class="col-md-8">
+			    	<input th:field="*{codigo}" type="hidden" class="form-control" id="inputCodigo" placeholder="Codigo">
+			    	<div class="text-danger" th:if="${#fields.hasErrors('codigo')}" th:errors="*{codigo}"></div>
+			  	</div>
+			  </div>
+			  
+			  
+			  <div class="row mb-3">
+			  		<label class="col-4">Titulo</label>
+				    <div class="col-md-8">
+				    	<input th:field="*{titulo}" type="text" class="form-control"  id="inputTitulo" placeholder="Titulo">  	
+				    	<div class="text-danger" th:if="${#fields.hasErrors('titulo')}" th:errors="*{titulo}"></div>
+				    </div>
+			  </div>
+			  
+			  
+			  <div class="row mb-3">
+				    <label  class="col-4">Categoría</label> 
+					<div class="col-8">
+						<select th:field="*{categoria}" class="form-control" id="categoriaId" style="padding: 5px">
+						  <option value ="" selected>Seleccione ...</option>
+						  <option value="desarrollo">Desarrollo</option>
+						  <option value="idioma">Idioma</option> 
+						  <option value="RRHH">RRHH</option>
+						  <option value="Comercial">Comercial</option> 
+						  <option value="Informatico">Desarrollo</option>
+						  <option value="Tecnico">Tecnico</option> 
+					</select>
+					<div class="text-danger" th:if="${#fields.hasErrors('categoria')}" th:errors="*{categoria}"></div>
+					</div>
+					
+			  </div>
+			  
+			  
+			  
+			  <div class="row mb-3">
+			  		<label class="col-4">Fecha de Inicio</label>
+				    <div class="col-8">
+			   	 		<input th:field=*{fechaInicio}  type="date" class="form-control" id="fechaInicioId" placeholder="Ingrese fecha inicio">
+						<div class="text-danger" th:if="${#fields.hasErrors('fechaInicio')}" th:errors="*{fechaInicio}"></div>
+			  		</div>	
+			  </div>
+			  
+			  
+			  <div class="row mb-3">
+			  		<label class="col-4">Fecha Fin</label>
+				    <div class="col-8">
+			    		<input th:field=*{fechaFinal} type="date" class="form-control" id="fechaFinId" placeholder="Ingrese fecha fin">
+					<div class="text-danger" th:if="${#fields.hasErrors('fechaFinal')}" th:errors="*{fechaFinal}"></div>
+			  		</div>
+			  </div>
+			  
+			  
+			  <div class="row mb-3">
+			  		<label class="col-4">Horas</label>
+				    <div class="col-8">
+			    		<input th:field=*{cantidadHoras} type="number" class="form-control" id="horasId" placeholder="Ingrese Cantidad de horas">
+					<div class="text-danger" th:if="${#fields.hasErrors('cantidadHoras')}" th:errors="*{cantidadHoras}"></div>
+			  		</div>
+			  </div>
+			  
+			  
+			  <div class="row-mb-3" style="display: flex ; margin: 15px; text-align: left; " >
+			  		<label class="col-4" style="padding-left: 50px">Modalidad</label>
+			  		<div class="col-8">
+			  			<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"  th:field="*{modalidad}" value="Virtual">
+						  <label class="form-check-label" for="inlineRadio1">Virtual</label>
+					    </div>
+					    <div class="form-check form-check-inline">
+						  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"  th:field="*{modalidad}" value="Presencial">
+						  <label class="form-check-label" for="inlineRadio2">Presencial</label>
+					    </div>
+					    <div class="text-danger" th:if="${#fields.hasErrors('modalidad')}" th:errors="*{modalidad}"></div>
+			  		</div>
+			  </div>
+			  
+			  
+			 <div class="row mb-3">
+			  		<label class="col-4">docente</label>
+				    <div class="col-8" >
+					    <select th:field="*{docente.legajo}" class="form-control" id="docenteId">
+						<option th:each="docente : ${docentes}"
+							th:value="${docente.legajo}"
+							th:text="${docente.apellido}+', '+${docente.nombre}"
+						/></select>    
+			 	   </div>
+			  </div>
+			  
+			  
+			  <div class="col-6" id="btn-c" style="display: flex;">
+			    <button type="submit" class="btn btn-primary">Enviar</button>
+			    <a style="margin-left: 5px;" th:href="@{/}" id="cancel" class="btn btn-secondary">Cancelar</a>
+			  </div>
+			   
+		</form>
+	</div>
+	
+	<!-- footer -->
+	<footer th:replace="layouts/footer :: footer"></footer>
+	<script type="text/javascript" th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+	<script type="text/javascript" th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script>
+	<script type="text/javascript" th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.min.js}"></script>
+	
+	</body>
+</html>
